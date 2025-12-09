@@ -50,17 +50,20 @@ function addTransactionDOM(transaction) {
 
 function updateValues() {
     const amounts = transactions.map((transaction) => transaction.amount);//looping through every object in transactions and taking only the exprnse or the income amount
-    const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);//reduce is used to add everything(income and expense)
+    const total = amounts.reduce((acc, item) => {
+        return acc += item
+    }, 0);//reduce is used to add everything(income and expense)
 
     //all positive numbers are added
     const income = amounts
         .filter(item => item > 0)
-        .reduce((acc, item) => (acc += item), 0);
+        .reduce((acc, item) => {
+            return acc += item
+        }, 0);
 
     //all negative numbers are added
     const expense = (
-        amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
-        -1
+        amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) * -1
     );
 
     //html is replaced using innerHTML
