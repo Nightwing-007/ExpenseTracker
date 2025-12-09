@@ -24,7 +24,6 @@ function addTransaction(e) {
         };
 
         transactions.push(transaction);//appending the expense or the income to the transactions array
-
         addTransactionDOM(transaction);
         updateValues();
 

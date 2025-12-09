@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Calibri;
+}
+
+.container {
+    margin: auto;
+    width: 700px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+h1 {
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+h3 {
+    padding-bottom: 10px;
+    margin: 40px 0 10px;
+    text-align: center;
+}
+
+h4 {
+    margin: 0;
+    text-align: center ;
+}
+
+/* Balance */
+.expenseContainer {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.expenseContainer > div {
+    flex: 1;
+    text-align: center;
+}
+
+.expenseContainer > div:first-of-type {
+    border-right: 1px solid #dedede;
+}
+
+.money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.money.plus { color: #2ecc71; }
+.money.minus { color: #c0392b; }
+
+/* Form Controls */
+label {
+    display: inline-block;
+    margin: 10px;
+}
+
+input{
+    border: 1px solid white;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: blue;
+    box-shadow: var(--box-shadow);
+    color: white;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 30px;
+    padding: 10px;
+    width: 90%;
+}
+
+/* History List */
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.list li {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+
+.list li.plus {
+    border: 2px solid green;
+}
+
+.list li.minus {
+    border: 2px solid red;
+}
+
+.deleteBtn {
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+}
